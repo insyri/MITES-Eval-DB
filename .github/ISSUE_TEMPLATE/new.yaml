@@ -1,0 +1,48 @@
+name: Report New College
+description: File a new method to submit evaluations to an college.
+title: "[College]: "
+assignees:
+  - insyri
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this report!
+  - type: input
+    id: college
+    attributes:
+      label: College Details
+      description: |
+        What's the name of the college?
+      placeholder: ex. Massachusetts Institute of Technology
+    validations:
+      required: true
+  - type: dropdown
+    id: method
+    attributes:
+      label: Method
+      description: How does this institution accept primarily accept these evaluations?
+      multiple: true
+      options:
+        - Does not accept evaluations
+        - Email
+        - MITES Google Form (if applicable)
+        - Applicant Portal
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional information
+      description: Put down any additional notes here to highlight any nuances.
+      placeholder: ex. Before you submit, you need to...
+    validations:
+      required: false
+  - type: textarea
+    id: proof
+    attributes:
+      label: Reference of proof
+      description: Please tell or show us how you were able to get this information. For example, you may provide screenshots of an email. (Be sure to redact any sensitive or personal information.)
+    validations:
+      required: true
